@@ -173,3 +173,12 @@ AWS data pipeline relies on amazon sns notifications as the primary way to indic
 
 
 
+###3 Integration with VMWare
+Use cases
+- self-service aws portal with vCenter
+- Migrate VMware VMs to Amazon EC2
+- Leverage vCenter experience while getting started with AWS
+- Reach new geographies from vCenter
+
+
+
