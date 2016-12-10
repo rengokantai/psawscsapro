@@ -1,5 +1,5 @@
-#### psawscsapro
-#####cp2
+# psawscsapro
+##cp2
 ELB characteristics:  
 support ports:
 - 25(smtp)
@@ -32,8 +32,56 @@ Fn::Join
 Fn::Select
 Ref
 ```
-######92 Cloudfront, kinesis
-Kinesis: data is stored 24 hours, can be increased to 7 days
+
+
+
+##17. Understanding CloudFront, Kinesis Streams, & SNS Mobile Push Notifications
+###2 Cloudfront
+####04:31 SSL
+SNI Custom SSL: service name indicator
+
+
+
+
+
+
+
+###4 Kinesis Streams
+####04:14
+Producers:
+- Amazon Kinesis Streams API
+- Amazon Kinesis Producer Library(KPL)
+- Amazon Kinesis Agent
+
+
+####05:23
+Shards
+- A uniquely identified group of data records in a stream
+- A stream is composed of one or more shards, each of which provides a fixed unit of capacity
+- Can support up to 5 transactions per second for reads
+- Max total data read rate of 2MB/s
+- Up to 1000 records per second for writes
+- __Max total data write rate of 1MB/s (including partition keys)__
+
+
+
+###6 SNS Mobile Notification
+Publisher->AMazon SNS ->Push Notification Services->Subscriber  
+
+
+##18. Understanding AWS High Availability and BC/DR Options
+###2 RTO and RPO
+Recovery time objective(RTO)  
+THe time it takes after a disruption to restore a business process to its service level, as defined by the operational level agreement (OLA) For example, if a disaster accurs at 12:00 PM and the RTO is eight hours, the DR process should restore the business process to t he acceptable service level by 8:00pm
+
+
+
+
+
+
+
+
+
 
 
 ######99 Understanding AWS HA
@@ -56,5 +104,6 @@ each snapshot still contains base snapshot data
 support: EC2 EMR  
 services: dynamodb, rds redshift  
 AWS data pipeline relies on amazon sns notifications as the primary way to indicate the status of pipelines and their components.
+
 
 
