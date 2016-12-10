@@ -72,9 +72,21 @@ Publisher->AMazon SNS ->Push Notification Services->Subscriber
 ##18. Understanding AWS High Availability and BC/DR Options
 ###2 RTO and RPO
 Recovery time objective(RTO)  
-THe time it takes after a disruption to restore a business process to its service level, as defined by the operational level agreement (OLA) For example, if a disaster accurs at 12:00 PM and the RTO is eight hours, the DR process should restore the business process to t he acceptable service level by 8:00pm
+THe time it takes after a disruption to restore a business process to its service level, as defined by the operational level agreement (OLA) For example, if a disaster accurs at 12:00 PM and the RTO is eight hours, the DR process should restore the business process to t he acceptable service level by 8:00pm  
 
+Recovery point objective(RPO)  
+Theacceptable amount of data loss measured in time. For exxpple, if a disaster occurs at 12:00pm and the RPO is one hour, the system shouuld recober all data that was in the system before 11:00 AM. Data loss will span only one hour between 11:00 AM and 12:00 PM
 
+####09:34
+Databases
+- RDS
+- DynamoDB
+- Redshift
+
+Deployment and orchestration
+- Cloudformation
+- Elastic Beanstalk
+- Opsworks
 
 
 
@@ -95,12 +107,23 @@ truecrypt
 aws will wipe the device after downloading the data
 
 aws will not destroy the device
-######100
+###5 Automated Backup
 Ec2 backup overview  
 snapshots store in s3  
 snapshots are incremental, charge for incremental space  
-each snapshot still contains base snapshot data
-######103AWS data pineline
+each snapshot still contains base snapshot data  
+
+Services with automated backups:
+- RDS
+- Elasticache
+- Redshift
+
+Services without automated backups
+- EC2
+
+
+##19. Understanding AWS Data Pipeline and Integration with VMware
+###2 AWS data pineline
 support: EC2 EMR  
 services: dynamodb, rds redshift  
 AWS data pipeline relies on amazon sns notifications as the primary way to indicate the status of pipelines and their components.
