@@ -108,10 +108,7 @@ aws will wipe the device after downloading the data
 
 aws will not destroy the device
 ###5 Automated Backup
-Ec2 backup overview  
-snapshots store in s3  
-snapshots are incremental, charge for incremental space  
-each snapshot still contains base snapshot data  
+
 
 Services with automated backups:
 - RDS
@@ -120,12 +117,58 @@ Services with automated backups:
 
 Services without automated backups
 - EC2
+RDS Automated Backup
+- All Backups stored on S3
+- MySQL DB engine only the innoDB storage engine is supported  
+- MariaDB engine only the StraDB storage engine is supported
+- __Delete a DB instance delete all automated backups__
+- __ Manual snapshots are not deleted__
+Ec2 backup overview 
+- No automated backups
+- Automated backups using CLI or python
+- snapshots store in s3  
+- snapshots are incremental, charge for incremental space  
+- each snapshot still contains base snapshot data  
 
 
 ##19. Understanding AWS Data Pipeline and Integration with VMware
 ###2 AWS data pineline
-support: EC2 EMR  
-services: dynamodb, rds redshift  
+AWS data pipeline
+- A web service that helps you reliably process and move data between different AWS compute and storage services, as well as on-permises data sources, at specified intervals.  
+
+Create ,access and manage using
+- AWS Management console
+- CLI
+- SDKS
+- Query API
+
+supported compute services: 
+- EC2 
+- EMR  
+supported services to store data: 
+- dynamodb
+- rds 
+- redshift  
+
+
+key concepts:
+- Task runners
+- Data nodes
+- Activities
+- Preconditions and actions
+
+
+Data nodes  
+Define the location and type of data that a pipeline activiey uses as inpyut ot output.
+- A dynamoDB table that contains data for HiveActovoty or EmrActivity to use
+- A MySQL table and database query that represents data for a pipeline activity to use
+- A Amazon Redshift table that contains data for redshiftCopyActivity to use
+- An Amazon  S3 location that contains one or more files for a pipeline activity to use
+
+
+####Activities
+A pipeline component that defines the work to perform  
+AWS data pipeline procides pre-packaged activities such as moving data form one location to another or running hive queries
 AWS data pipeline relies on amazon sns notifications as the primary way to indicate the status of pipelines and their components.
 
 
