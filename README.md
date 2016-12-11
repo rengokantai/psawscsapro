@@ -32,6 +32,21 @@ Fn::Join
 Fn::Select
 Ref
 ```
+##16. Understanding CloudFormation, Elastic Beanstalk, and OpsWorks
+###2 AWS CloudFormation
+
+###3 Template Elements
+####04:28
+Stack Creation Errors
+- You will be charged for resources provisioned even if there is an error.
+
+###4 AWS Elastic Beanstalk
+####03:45
+Cloudformation vs elastic beanstalk
+- CloudFormation supports Elastic Beanstalk
+- Elastic Beanstalk does not provision CloudFormation templates
+
+
 
 
 
