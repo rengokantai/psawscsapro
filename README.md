@@ -58,9 +58,17 @@ __Instance type modifications are supported only for Linux__. Due to licensing d
 
 
 ##15. Managing Billing Strategies: Consolidated Billing and Resource Groups
+###3 Paying Accounts
+####01:49 CloudTrail
+You can consolidate all logs into a single S3 bucket:
+- Turn on CloudTrail in paying account
+- Create an S3 bucket policy that allows cross account access
+- Tuen on CloudTrail in all other accounts
+- Coufigure all accounts to store logs in the paying account S3 bucket
 
 
-
+###5 Demo: Creating and Working with Resource Groups
+create tags.
 
 
 
