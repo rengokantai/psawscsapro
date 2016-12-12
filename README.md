@@ -32,6 +32,41 @@ Fn::Join
 Fn::Select
 Ref
 ```
+
+
+##14. Managing Billing Strategies: EC2 Standard and Reserved Instances
+###2 EC2 Instance Types
+reserved instances:
+- standard reserved instance: take a paticular VM or a paticular server and I expect to run this server 24/7/365.  you get a lower hourly rate in exchange for a commitment, and that commitment can either be a one-year commitment
+
+- scheduled reserved instance: 
+
+
+###3 EC2 instance in-depth
+General purpose(GP) t2 m4 m3  
+Compute optimized c3 c4  
+memory optimized r3
+storage optimized i2 d2  
+gpu g2  
+
+###4 Standard Reserved Instances Attributes
+####02:16
+__Instance type modifications are supported only for Linux__. Due to licensing differences Linux RIs cannot be modified to RedHat or SUSE
+
+###3 EC2 instance in-depth
+
+
+
+##15. Managing Billing Strategies: Consolidated Billing and Resource Groups
+
+
+
+
+
+
+
+
+
 ##16. Understanding CloudFormation, Elastic Beanstalk, and OpsWorks
 ###2 AWS CloudFormation
 
